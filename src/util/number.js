@@ -112,7 +112,7 @@ define(function (require) {
         }
         // Avoid range error
         precision = Math.min(Math.max(0, precision), 20);
-        return +(+x).toFixed(precision);
+        return +(+x).toFixed(Math.min(precision, 20));
     };
 
     number.asc = function (arr) {
